@@ -15,6 +15,7 @@
 			<div class="item">
 				<h2>Return the Sum of Two Numbers</h2>
 				<p>Challenge taken from : <a href="https://edabit.com/challenge/3LpBLgNRyaHMvNb4j" target="_blank">edabit</a></p>
+				<p>Test case currently being run is addition(3,2)</p>
 				<button onclick="javascript:addition(3,2);">Run Script Here</button>
 				<p id="f1">Answers Returned Here</p>
 			</div>
@@ -22,6 +23,7 @@
 			<div class="item">
 				<h2>From One to X</h2>
 				<p>Challenge taken from: <a href="https://edabit.com/challenge/4gzDuDkompAqujpRi" target="_blank">edabit</a></p>
+				<p>Test case currently being run is addOneToX(600)</p>
 				<button onclick="javascript:addOneToX(600);">Run Script Here</button>
 				<p id="f2">Answers Returned Here</p>
 			</div>
@@ -31,6 +33,7 @@
 				<h2>Redundant Calling</h2>
 				<p>Challenge taken from: <a href="https://edabit.com/challenge/hzxN9bAebBPNqdQto" target="_blank">edabit</a></p>
 				<p>Special information researched for this problem: <a href="https://stackoverflow.com/questions/32156920/how-to-call-a-function-within-another-function-in-javascript" target="_blank">Calling a Function in a Function</a></p>
+				<p>Test case currently being run is redundantOne('dog')</p>
 				<button onclick="javascript:redundantOne('dog');">Run Script Here</button>
 				<p id="f3">Answers Returned Here</p>
 
@@ -41,10 +44,20 @@
 				<h2>Generation Generator</h2>
 				<p>Challenge taken from:<a href="https://edabit.com/challenge/48EJWLhF224na8po3" target="_blank">edabit</a></p>
 				<p>Special information researched for this problem: <a href="https://www.w3schools.com/jsref/jsref_abs.asp" target="_blank">Math.abs(value)</a></p>
+				<p>Test case currently being run is generation(-2, m)</p>
 				<button onclick="javascript:generation(-2, 'm');">Run Script Here</button>
 				<p id="f4">Answers Returned Here</p>
 
 			</div>	
+
+			<div class="item">
+				<h2>Power Calculator</h2>
+				<p>Challenge taken from: <a href="https://edabit.com/challenge/wAdE9te55cowBLcPs" target="_blank">edabit</a></p>
+				<p>Special information researched for this problem: <a href="https://www.electronics-tutorials.ws/dccircuits/dcp_2.html" target="_blank">Power Calculation</a></p>
+				<p>Test case currently being run is circuitPower(110, 3)</p>
+				<button onclick="javascript:circuitPower(110, 3);">Run Script Here</button>
+				<p id="f5">Answers Returned Here</p>
+			</div>
 
 	</div>
 	
@@ -137,6 +150,15 @@
 
 			return lineage;
 
+		}
+
+		function circuitPower(voltage, current){
+
+			var power = voltage * current;
+
+			document.getElementById("f5").innerHTML = power + " watts";
+
+			return power;
 		}
 
 	</script>
