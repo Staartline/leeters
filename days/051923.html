@@ -3,45 +3,57 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>May 19th, 2023 - Coincidentally, my brother graduated from university today.</title>
+	<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-	<h1>May 19th, 2023</h1>
-	<p>And so, our pogchamp journey begins...</p>
 
-	<div>
-		<h2>Return the Sum of Two Numbers</h2>
-		<p>Challenge taken from : <a href="https://edabit.com/challenge/3LpBLgNRyaHMvNb4j" target="_blank">edabit</a></p>
-		<button onclick="javascript:addition(3,2);">Run Script Here</button>
-		<p id="f1">Answers Returned Here</p>
+	<div class="container">
+		<h1>May 19th, 2023</h1>
+			<p>And so, our pogchamp journey begins...</p>
+
+			<div class="item">
+				<h2>Return the Sum of Two Numbers</h2>
+				<p>Challenge taken from : <a href="https://edabit.com/challenge/3LpBLgNRyaHMvNb4j" target="_blank">edabit</a></p>
+				<button onclick="javascript:addition(3,2);">Run Script Here</button>
+				<p id="f1">Answers Returned Here</p>
+			</div>
+
+			<div class="item">
+				<h2>From One to X</h2>
+				<p>Challenge taken from: <a href="https://edabit.com/challenge/4gzDuDkompAqujpRi" target="_blank">edabit</a></p>
+				<button onclick="javascript:addOneToX(600);">Run Script Here</button>
+				<p id="f2">Answers Returned Here</p>
+			</div>
+
+			<div class="item">
+				
+				<h2>Redundant Calling</h2>
+				<p>Challenge taken from: <a href="https://edabit.com/challenge/hzxN9bAebBPNqdQto" target="_blank">edabit</a></p>
+				<button onclick="javascript:redundantOne('dog');">Run Script Here</button>
+				<p id="f3">Answers Returned Here</p>
+
+			</div>
+
+
+			<div class="item">
+				<h2>Generation Generator</h2>
+				<p>Challenge taken from:<a href="https://edabit.com/challenge/48EJWLhF224na8po3" target="_blank">edabit</a></p>
+				<button onclick="javascript:();">Run Script Here</button>
+				<p id="f4">Answers Returned Here</p>
+
+			</div>
+
+			<div class="item">
+				<h2></h2>
+				<p></p>
+				<button onclick="javascript:();">Run Script Here</button>
+				<p id="f5">Answers Returned Here</p>
+
+			</div>		
+
 	</div>
-
-	<div>
-		<h2></h2>
-		<p></p>
-		<button onclick="javascript:addOneToX(600);">Run Script Here</button>
-		<p id="f2">Answers Returned Here</p>
-	</div>
-		<h2></h2>
-		<p></p>
-		<button onclick="javascript:();">Run Script Here</button>
-		<p id="f3"></p>
-
-	<div>
-		<h2></h2>
-		<p></p>
-		<button onclick="javascript:();">Run Script Here</button>
-		<p id="f4"></p>
-
-	</div>
-
-	<div>
-		<h2></h2>
-		<p></p>
-		<button onclick="javascript:();">Run Script Here</button>
-		<p id="f5"></p>
-
-	</div>
+	
 
 	<script>
 		function sumTwo(a, b, c, d, e, f){
@@ -76,10 +88,27 @@
 
 			document.getElementById("f2").innerHTML = total;
 			return total;
+		}
 
+		function redundantOne(string){
+			return redundantTwo(string);
+		}
+
+		function redundantTwo(string){
+			document.getElementById("f3").innerHTML = string;
+			return string;
+		}
+
+		function generation(gen, gender){
+			var lineage;
+
+			if (gen === 0){
+				lineage = "me";
+			}
 
 
 		}
+
 	</script>
 </body>
 </html>

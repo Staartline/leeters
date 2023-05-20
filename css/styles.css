@@ -1,0 +1,19 @@
+body{
+	background-color:whitesmoke;
+	align-items: center;
+	text-align: center;
+}
+
+
+.container{
+	display:inline-grid;
+	align-items: center;
+	min-width:75%;
+	gap: 10px;
+}
+
+.item{
+	background-color: pink;
+	border-radius: 30px;
+	
+}
