@@ -30,6 +30,7 @@
 				
 				<h2>Redundant Calling</h2>
 				<p>Challenge taken from: <a href="https://edabit.com/challenge/hzxN9bAebBPNqdQto" target="_blank">edabit</a></p>
+				<p>Special information researched for this problem: <a href="https://stackoverflow.com/questions/32156920/how-to-call-a-function-within-another-function-in-javascript" target="_blank">Calling a Function in a Function</a></p>
 				<button onclick="javascript:redundantOne('dog');">Run Script Here</button>
 				<p id="f3">Answers Returned Here</p>
 
@@ -39,18 +40,11 @@
 			<div class="item">
 				<h2>Generation Generator</h2>
 				<p>Challenge taken from:<a href="https://edabit.com/challenge/48EJWLhF224na8po3" target="_blank">edabit</a></p>
-				<button onclick="javascript:();">Run Script Here</button>
+				<p>Special information researched for this problem: <a href="https://www.w3schools.com/jsref/jsref_abs.asp" target="_blank">Math.abs(value)</a></p>
+				<button onclick="javascript:generation(-2, 'm');">Run Script Here</button>
 				<p id="f4">Answers Returned Here</p>
 
-			</div>
-
-			<div class="item">
-				<h2></h2>
-				<p></p>
-				<button onclick="javascript:();">Run Script Here</button>
-				<p id="f5">Answers Returned Here</p>
-
-			</div>		
+			</div>	
 
 	</div>
 	
@@ -100,12 +94,48 @@
 		}
 
 		function generation(gen, gender){
-			var lineage;
-
-			if (gen === 0){
+			var lineage = "";
+			//You are you (this generation)
+			if (gen == 0){
 				lineage = "me";
 			}
 
+			var counter = 0;
+
+			//Posts a numbder of great, and then a single grand
+			while(counter < Math.abs(gen)){
+				if (counter == (Math.abs(gen) - 1)){
+					lineage = lineage + " grand"
+					counter++;
+					continue;
+				}
+					lineage = lineage + "great ";
+					counter++;
+			}
+
+			//This determines the generation(younger), then the gender
+			if (gen < 0){
+				if (gender == "f"){
+					lineage = lineage + "daughter";
+				}
+				else{
+					lineage = lineage + "son";
+				}
+			}
+
+			//This determines the generation (older), then the gender
+			if (gen > 0){
+				if (gender == "f"){
+					lineage = lineage + "mother";
+				}
+				else{
+					lineage = lineage + "father";
+				}
+			}
+
+			document.getElementById("f4").innerHTML = lineage;
+
+			return lineage;
 
 		}
 
