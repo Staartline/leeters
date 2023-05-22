@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>May 21st, 2023 - Casual Sunday</title>
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+	<div class="container">
+		<h1>May 21st, 2023</h1>
+		<p>Hi, back at it again with more coding. I wanted to work on these problems yesterday, but then I lost power.</p>
+
+			<div class="item">
+				<h2>Reverse String</h2>
+				<p>Challenge taken from : <a href="https://leetcode.com/problems/reverse-string/" target="_blank">Leetcode</a></p>
+				<p>Test case currently being run is hello</p>
+				<button onclick="javascript:reverseStr(['h','e','l','l','o']);">Run Script Here</button>
+				<p id="f1">Answers Returned Here</p>
+			</div>
+			<div class="item">
+				<h2>How Many are True?</h2>
+				<p>Challenge taken from : <a href="https://edabit.com/challenge/GLbuMfTtDWwDv2F73" target="_blank">Edabit</a></p>
+				<p>Test case currently being run is [true, false, false, true, false] </p>
+				<button onclick="javascript:countTrue([true, false, false, true, false]);">Run Script Here</button>
+				<p id="f3">Answers Returned Here</p>
+			</div>	
+	</div>
+	
+
+	<script>
+		function reverseStr(ogStr){
+			var reversed = [];
+	
+			for(var i = 0; i < ogStr.length + 1; i++){
+				reversed.push(ogStr[ogStr.length - i]);
+				console.log(reversed);
+			}
+			document.getElementById("f1").innerHTML = reversed.join("");
+			return reversed;
+		}
+
+		function countTrue(processArray){
+			var count = 0;
+			if(processArray === undefined || processArray.length == 0){
+				return count;
+			}
+
+			var index = 0;
+			while(index < processArray.length){
+				
+				if (processArray[index] == true){
+					console.log(count);
+					count++;
+				}
+				index++;
+			}
+
+			document.getElementById("f3").innerHTML = count;
+			return count;
+
+		}
+	
+
+	</script>
+</body>
+</html>
